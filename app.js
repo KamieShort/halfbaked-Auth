@@ -19,12 +19,11 @@ signUpForm.addEventListener('submit', async (e) => {
 });
 
 // Redirect to /other-page on successful auth
-checkAuth();
-
 signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     console.log(signInEmail.value, signInPassword.value);
     await signInUser(signInEmail.value, signInPassword.value);
     checkAuth();
+    redirectIfLoggedIn();
 });
 // Redirect to /other-page when page loads if user is authenticated

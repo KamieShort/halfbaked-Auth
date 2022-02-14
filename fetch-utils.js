@@ -26,7 +26,7 @@ export async function checkAuth() {
 }
 
 export async function redirectIfLoggedIn() {
-    const user = await getUser();
+    const user = getUser();
     // console.log(user);
     if (user) {
         location.replace('/other-page');
