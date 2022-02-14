@@ -1,8 +1,11 @@
 // use checkAuth function to redirect is user not authenticated
 
-// import { checkAuth } from '../fetch-utils';
+import { checkAuth, logout } from '../fetch-utils.js';
 
 // add event listener to the logout button and call logout
-// checkAuth
+checkAuth();
 
-// const logoutBtn
+const logoutBtn = document.getElementById('logout');
+logoutBtn.addEventListener('click', async () => {
+    await logout();
+});
